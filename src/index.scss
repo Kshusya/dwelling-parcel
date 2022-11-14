@@ -1,0 +1,73 @@
+html {
+  font-family: 'Albert Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+$first-black-color: #191623;
+$second-black-color: #666270;
+$first-white-color: #FFFFFF;
+$second-white-color: #E6DDFF;
+
+.container {
+  padding-right: 135px;
+  padding-left: 135px;
+}
+
+.theme_yellow {
+  background-color: #FFFAE9;
+}
+
+.nav {
+  display: flex;
+  &__logo {
+    display: flex;
+    gap: 6px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 34px;
+    color: $first-black-color;
+  }
+  &__menu {
+    gap: 42px;
+  }
+}
+
+.header {
+  &__top {
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 36px;
+    margin-bottom: 92px;
+  }
+  &__row-images {
+    justify-content: space-between;
+    column-gap: 2%;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 124px;
+    line-height: 114px;
+    letter-spacing: -0.02em;
+  }
+}
+
+.row {
+  display: flex;
+}
+
+.menu {
+  display: flex;
+  &__link {
+    font-size: 16px;
+    line-height: 26px;
+    color: $first-black-color;
+  }
+}
