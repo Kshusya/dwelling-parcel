@@ -28,6 +28,7 @@
 					<a class="menu__link" href="#">Reviews</a>
 				</div>
 				<a class="button nav__button">Register</a>
+				<img class="nav__burger-menu-icon" src="/assets/img/menu.svg" alt="">
 			</nav>
 			<div class="header__content">
 				<div>
@@ -38,14 +39,14 @@
 						<img class="header__image" src="../assets/img/main-furniture-4.svg" alt="">
 					</div>
 					<h1 class="header__title">Home is where your story begins</h1>
-					<p class="text">Building a next-generation collaborative platform to connect renters, homeowners, and agents. Live the way you want. Beautiful homes. Incredible locations. Pricing that makes sense.
+					<p class="text text_grey header__text">Building a next-generation collaborative platform to connect renters, homeowners, and agents. Live the way you want. Beautiful homes. Incredible locations. Pricing that makes sense.
 					</p>
 				</div>
-				<div class="row">
-					<div class="search-form search-form__body">
+				<div class="row search-form">
+					<div class="search-form__body">
 						<input class="search-form__input" placeholder="Where are you moving?" type="text">
 						<select class="search-form__select" name="type-of-home">
-							<option value="">What type of home?</option>
+							<option value="" disabled="disabled" selected>What type of home?</option>
 							<option value="flat">Flat</option>
 							<option value="private-house">Private House</option>
 							<option value="commercial">Commercial Real Estate</option>
@@ -53,12 +54,68 @@
 							<option value="summer-cottage">Summer cottage</option>
 							<option value="hotel">Hotel</option>
 						</select>
-						<a class="search-form__button">Find a home</a>
+						<a class="button search-form__button">Find a home
+							<img src="/assets/img/vector2.svg" alt="">
+						</a>
 					</div>
-					<img src="#" alt="">
+					<img class="header__scroll-image" src="/assets/img/scroll.svg" alt="">
 				</div>
 			</div>
 		</header>
+	</section>
+	<section class="theme theme_purple container feature feature_pt-big">
+		<div class="row feature__position-order">
+			<h2 class="title title_white container_small" style="max-width: 570px;">Trusted by the people across the globe</h2>
+			<div>
+				<p class="text text_light-purple feature__text-content feature__text-content_width-470">Building a next-generation collaborative platform to connect renters, homeowners, and agents. Live the way you want. Beautiful homes. Incredible locations. Pricing that makes sense.</p>
+				<p class="text text_light-purple feature__text-content feature__text-content_width-470" style="padding-top: 16px;">No matter what stage of life you’re in, having friends to share experiences with is what it’s all about.</p>
+			</div>
+		</div>
+		<div class="row feature__numbers numbers">
+			<div class="row numbers__row">
+				<img class="numbers__img" src="/assets/img/emoji1.svg" alt="">
+				<div>
+					<h2 class="title title_white">+20K</h2>
+					<p class="text text_light-purple">Clients worldwide</p>
+				</div>
+			</div>
+			<div class="row numbers__row">
+				<img class="numbers__img" src="/assets/img/emoji2.svg" alt="">
+				<div>
+					<h2 class="title title_white">95.7%</h2>
+					<p class="text text_light-purple">Satisfied Clients</p>
+				</div>
+			</div>
+			<div class="row numbers__row">
+				<img class="numbers__img" src="/assets/img/emoji3.svg" alt="">
+				<div>
+					<h2 class="title title_white">100+</h2>
+					<p class="text text_light-purple">City around</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="theme theme_white container feature feature_pt-big">
+		<div class="row feature__position-order feature__position-order_pb-big">
+			<div style="position: relative;">
+				<div class="feature__image-block">
+					<img src="/assets/img/furniture-image.svg" alt="">
+				</div>
+				<div class="message-block feature__message-block text-align-center">
+					<picture>
+						<img src="/assets/img/ellipse-expert.svg" alt="">
+					</picture>
+					<p class="text text_black message-block__name">David Warner</p>
+					<div class="message-block__occupation">Property Agent</div>
+					<a href="#" class="button message-block__button">Messages</a>
+				</div>
+			</div>
+			<div class="container_small feature__text-content feature__text-content_width-470">
+				<h2 class="title title_black">Providing the effective solutions for you</h2>
+				<p class="text text_grey">Building a next-generation collaborative platform to connect renters, homeowners, and agents. Live the way you want. Beautiful homes. Incredible locations. Pricing that makes sense.</p>
+				<a class="button feature__button" href="#">More About Us</a>
+			</div>
+		</div>
 	</section>
 </body>
 
