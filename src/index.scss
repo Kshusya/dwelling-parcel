@@ -90,6 +90,9 @@ a {
   &_purple {
     background-color: $purple-color;
   }
+  &_purple-white {
+    background: linear-gradient(to bottom, #6637EE 0%, #6637EE 50%, #FFFFFF 50%, #FFFFFF 100%);
+  }
 }
 
 .button {
@@ -271,6 +274,12 @@ a {
 }
 
 .feature {
+  & h2 {
+    padding-bottom: 20px;
+    @media screen and (max-width: 767px) {
+      padding-bottom: 12px;
+    }
+  }
   &__position-order {
     justify-content: space-between;
     @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -278,9 +287,6 @@ a {
     }
     @media screen and (max-width: 767px) {
       flex-direction: column;
-    }
-    & h2 {
-      padding-bottom: 12px;
     }
     &_pb-big {
       padding-bottom: 150px;
@@ -358,10 +364,34 @@ a {
       margin-top: 28px;
     }
   }
+  &__product-block {
+    display: grid;
+    grid-template:
+        "featured description description" auto
+        "featured image1 image2" auto / 1fr 1fr 1fr;
+    column-gap: 30px;
+    @media screen and (max-width: 767px) {
+      grid-template:
+      "description"
+      "featured";
+    }
+  }
   &_pt-big {
     padding-top: 150px;
     @media screen and (max-width: 767px) {
       padding-top: 55px;
+    }
+  }
+  &_pt-medium {
+    padding-top: 100px;
+    @media screen and (max-width: 767px) {
+      padding-top: 55px;
+    }
+  }
+  &_pb-big {
+    padding-bottom: 150px;
+    @media screen and (max-width: 767px) {
+      padding-bottom: 100px;
     }
   }
 }
@@ -389,5 +419,74 @@ a {
     background-color: $purple-color;
     padding: 0.44em 1.33em;
     margin-top: 0.88em;
+  }
+}
+
+.product-block {
+  &__featured {
+    grid-area: featured;
+    margin-top: auto;
+    margin-bottom: auto;
+    & > img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__description {
+    grid-area: description;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 70px;
+  }
+  &__arrows {
+    display: flex;
+    gap: 28px;
+  }
+  &__circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &_white {
+      background-color: $first-white-color;
+    }
+    &_orange {
+      background-color: $orange-color;
+    }
+    &_purple {
+      background-color: $purple-color;
+    }
+  }
+  &__button {
+    padding: 15px 35px;
+    margin-top: 55px;
+  }
+}
+
+.featured-item {
+  &__description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__price {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 32px;
+    color: $first-black-color;
+  }
+  &__currency {
+    color: $orange-color;
+  }
+  &__name {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 36px;
+    color: $first-black-color;
   }
 }
