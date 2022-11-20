@@ -48,6 +48,9 @@ a {
   &_light-purple {
     color: $second-white-color;
   }
+  &_purple-grey {
+    color: #C3BFD0;
+  }
   @media screen and (max-width: 767px) {
     font-size: 14px;
     line-height: 24px;
@@ -93,6 +96,9 @@ a {
   &_purple-white {
     background: linear-gradient(to bottom, #6637EE 0%, #6637EE 50%, #FFFFFF 50%, #FFFFFF 100%);
   }
+  &_black {
+    background-color: $first-black-color;
+  }
 }
 
 .button {
@@ -110,13 +116,6 @@ a {
   &__logo {
     display: flex;
     gap: 6px;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 34px;
-    color: $first-black-color;
-    &:hover {
-      text-decoration: none;
-    }
   }
   &__menu {
     display: flex;
@@ -216,6 +215,16 @@ a {
   }
 }
 
+.logo {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 34px;
+  color: $first-black-color;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 .search-form {
   @media screen and (max-width: 1279px) {
     flex-direction: column;
@@ -294,6 +303,9 @@ a {
         padding-bottom: 100px;
       }
     }
+    &_ai-center {
+      align-items: center;
+    }
   }
   &__text-content_width-470 {
     max-width: 470px;
@@ -357,11 +369,24 @@ a {
       }
     }
   }
+  &__two-buttons {
+    display: inline-flex;
+    column-gap: 24px;
+    row-gap: 12px;
+    align-items: flex-end;
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+    }
+  }
   &__button {
     padding: 15px 35px;
     margin-top: 40px;
     @media screen and (max-width: 767px) {
       margin-top: 28px;
+    }
+    &_purple {
+      background-color: $purple-color;
+      margin: 0;
     }
   }
   &__product-block {
@@ -374,6 +399,29 @@ a {
       grid-template:
       "description"
       "featured";
+    }
+  }
+  &__brands {
+    display: flex;
+    column-gap: 60px;
+    row-gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 48px;
+    border-top: 2px solid #454153;
+  }
+  &__two-images {
+    display: flex;
+    column-gap: 5.26%;
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+      margin-bottom: 50px;
+    }
+    @media screen and (max-width: 767px) {
+      margin-bottom: 43.6px;
+    }
+    & img {
+      width: 100%;
+      min-width: 0;
     }
   }
   &_pt-big {
@@ -392,6 +440,12 @@ a {
     padding-bottom: 150px;
     @media screen and (max-width: 767px) {
       padding-bottom: 100px;
+    }
+  }
+  &_pb-medium {
+    padding-bottom: 100px;
+    @media screen and (max-width: 767px) {
+      padding-bottom: 55px;
     }
   }
 }
@@ -488,5 +542,193 @@ a {
     font-size: 26px;
     line-height: 36px;
     color: $first-black-color;
+  }
+}
+
+.video-block {
+  &__description {
+    margin-bottom: 70px;
+    max-width: 510px;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 28px;
+    }
+  }
+}
+
+.reviews-block {
+  &__review {
+    position: relative;
+    max-width: 598px;
+    padding-top: 28px;
+    padding-left: 28px;
+    padding-right: 28px;
+    margin-bottom: 48px;
+    @media screen and (max-width: 1279px) {
+      // margin-bottom: 38px;
+      margin-top: 28px;
+    }
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #454153;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      content: url(/assets/img/quote.svg);
+    }
+  }
+  &__author {
+    display: flex;
+    column-gap: 14px;
+    margin-top: 22px;
+    @media screen and (max-width: 767px) {
+      margin-top: 16px;
+    }
+  }
+  &__navigation-dots {
+    display: flex;
+    column-gap: 12px;
+    margin-top: 18px;
+    @media screen and (max-width: 767px) {
+      margin-top: 8px;
+    }
+  }
+  &__dot {
+    box-sizing: border-box;
+    width: 24px;
+    height: 6px;
+    border: 1px solid $first-white-color;
+    border-radius: 3px;
+    &_active {
+      background: $orange-color;
+      border: 1px solid $orange-color;
+    }
+  }
+}
+
+.review {
+  &__occupation {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+.footer {
+  &__logo {
+    display: flex;
+    gap: 6px;
+  }
+  &__button {
+    padding: 15px 35px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+  &__email-subscription {
+    width: 178px;
+    padding: 15px;
+    outline: 1px solid #CDC9BB;
+    border: 0;
+    border-radius: 6px;
+    background-color: #FFFAE9;
+    color: #666270;
+    font-size: 18px;
+    line-height: 28px;
+  }
+  &__links-block {
+    display: flex;
+    // flex-wrap: wrap;
+    column-gap: 100px;
+    @media screen and (max-width: 1279px) {
+      margin-bottom: 36px;
+    }
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+    }
+    & a {
+      display: block;
+    }
+  }
+  &_top {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 89px;
+    padding-bottom: 38px;
+    border-top: 1px solid #CDC9BB;
+    border-bottom: 1px solid #CDC9BB;
+    @media screen and (max-width: 1279px) {
+      padding-top: 0;
+      flex-direction: column;
+    }
+  }
+  &_bottom {
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 0;
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  &__social-media {
+    display: inline-flex;
+    gap: 14px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 18px;
+    }
+  }
+}
+
+.email-block {
+  @media screen and (max-width: 1279px) {
+    order: 2;
+  }
+  &__text {
+    padding-top: 18px;
+    padding-bottom: 21px;
+  }
+  &__subscribe {
+    display: inline-flex;
+    gap: 19px;
+    @media screen and (max-width: 374px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
+
+.links {
+  &__title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 32px;
+    margin-bottom: 24px;
+    @media screen and (max-width: 1279px) {
+      margin-top: 28px;
+    }
+  }
+  &__name:not(:last-of-type) {
+    margin-bottom: 18px;
+  }
+}
+
+.social-media {
+  &__circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: $purple-color;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &_orange {
+      background-color: $orange-color;
+    }
   }
 }
