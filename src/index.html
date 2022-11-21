@@ -8,6 +8,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 	<link href="index.scss" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -20,7 +21,7 @@
 					<img src="../assets/img/logo.svg" alt="">
 					dwelling
 				</a>
-				<div class="menu nav__menu">
+				<div class="menu nav__menu animate__animated">
 					<a class="menu__link" href="#">Home</a>
 					<a class="menu__link" href="#">About us</a>
 					<a class="menu__link" href="#">Renters</a>
@@ -28,7 +29,12 @@
 					<a class="menu__link" href="#">Reviews</a>
 				</div>
 				<a class="button nav__button">Register</a>
-				<img class="nav__burger-menu-icon" src="/assets/img/menu.svg" alt="">
+				<!-- <img class="nav__burger-menu-icon" src="/assets/img/menu.svg" alt=""> -->
+				<svg id="menu-button" class="hamburger nav__burger-menu-icon">
+					<line x1="0" y1="50%" x2="100%" y2="50%" class="hamburger__bar hamburger__bar_top" />
+					<line x1="0" y1="50%" x2="100%" y2="50%" class="hamburger__bar hamburger__bar_mid" />
+					<line x1="0" y1="50%" x2="100%" y2="50%" class="hamburger__bar hamburger__bar_bot" />
+				</svg>
 			</nav>
 			<div class="header__content">
 				<div>
@@ -159,8 +165,8 @@
 						</div>
 					</div>
 				</div>
-				<img style="grid-area: image1;width: 100%;height: auto;" src="/assets/img/furniture-2.svg" alt="">
-				<img style="grid-area: image2;width: 100%;height: auto;" src="/assets/img/furniture-3.svg" alt="">
+				<img class="product-block__another" style="grid-area: image1;width: 100%;height: auto;" src="/assets/img/furniture-2.svg" alt="">
+				<img class="product-block__another" style="grid-area: image2;width: 100%;height: auto;" src="/assets/img/furniture-3.svg" alt="">
 			</div>
 			<div class="text-align-center">
 				<a class="button product-block__button" href="#">All Property</a>
@@ -275,6 +281,54 @@
 			<p style="font-size: 16px;line-height: 26px;" class="text text_grey">Copyright @UIHUT 2022</p>
 		</div>
 	</footer>
+
+	<script>
+		// make menu icon change
+		const hamburger = document.getElementById("menu-button");
+		hamburger.addEventListener("click", () => {
+			hamburger.classList.toggle("is-opened");
+			}
+		);
+
+		// debug closed menu condition when reesize page
+		window.addEventListener("resize", () => {
+			hamburger.classList.remove("is-opened")
+		})
+	</script>
+	
+	<script>
+		// show and hide menu on mobile devices
+		const dropdownElements = document.getElementsByClassName("nav__menu");
+		const navbarButton = document.getElementById("menu-button");
+		function toggleMenu() {
+			for (const e of dropdownElements) {
+				e.classList.remove("animate__fadeInDown");
+				e.classList.remove("animate__fadeOutUp", "animate__faster");
+				if (!e.classList.contains("nav__menu_is-opened")) {
+					e.classList.toggle("nav__menu_is-opened");
+					e.classList.add("animate__fadeInDown");
+				}
+				else {
+					e.classList.add("animate__fadeOutUp", "animate__faster");
+
+					e.addEventListener('animationend', function () {
+						e.classList.toggle("nav__menu_is-opened");
+					}, {once: true});
+				}
+			}
+		}
+		navbarButton.addEventListener("click", toggleMenu);
+
+		// debug closed menu when resize page
+		window.addEventListener("resize", () => {
+                for (const e of dropdownElements) {
+                    e.classList.remove("nav__menu_is-opened");
+                    e.classList.remove("animate__fadeInDown");
+                    e.classList.remove("animate__fadeOutUp");
+                }
+            })
+	</script>
+
 </body>
 
 </html>
