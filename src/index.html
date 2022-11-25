@@ -28,8 +28,7 @@
 					<a class="menu__link" href="#">Homeowners</a>
 					<a class="menu__link" href="#">Reviews</a>
 				</div>
-				<a class="button nav__button">Register</a>
-				<!-- <img class="nav__burger-menu-icon" src="/assets/img/menu.svg" alt=""> -->
+				<a class="button nav__button" href="#">Register</a>
 				<svg id="menu-button" class="hamburger nav__burger-menu-icon">
 					<line x1="0" y1="50%" x2="100%" y2="50%" class="hamburger__bar hamburger__bar_top" />
 					<line x1="0" y1="50%" x2="100%" y2="50%" class="hamburger__bar hamburger__bar_mid" />
@@ -62,7 +61,7 @@
 							<option value="summer-cottage">Summer cottage</option>
 							<option value="hotel">Hotel</option>
 						</select>
-						<a class="button search-form__button">Find a home
+						<a class="button search-form__button" href="#">Find a home
 							<img src="/assets/img/vector2.svg" alt="">
 						</a>
 					</div>
@@ -131,47 +130,102 @@
 			</div>
 		</div>
 	</section>
-	<section class="theme theme_purple-white container feature">
-		<div class="product-block feature_pb-big">
+	<section class="theme theme_purple-white container feature feature_pb-big">
 			<div class="feature_pt-medium feature__product-block">
-				<div class="product-block__featured featured-item">
-					<img src="/assets/img/furniture-1.svg" alt="">
-					<div class="featured-item__description">
-						<div>
-							<div class="featured-item__price"><span class="featured-item__currency">$</span> 49,143</div>
-							<div class="featured-item__name">Gulshan duplex house</div>
+				<div class="product-block">
+					<div class="product-block__navigation">
+						<div class="product-block__description feature__text-content feature__text-content_width-470">
+							<h2 class="title title_white">Popular property</h2>
+							<p class="text text_light-purple">Building a next-generation collaborative platform to connect renters, homeowners, and agents.</p>
 						</div>
-						<div class="product-block__circle product-block__circle_purple">
-							<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M1 1H13M13 1V13M13 1L1 13" stroke="#FFFFFF" stroke-width="1.5"/>
-							</svg>	
+						<div class="product-block__arrows">
+							<div id="prev" class="product-block__circle product-block__circle_reverse">
+								<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1 1H13M13 1V13M13 1L1 13" stroke="#6637EE" stroke-width="1.5"/>
+								</svg>
+							</div><div id="next" class="product-block__circle product-block__circle_active">
+								<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1 1H13M13 1V13M13 1L1 13" stroke="#FFFFFF" stroke-width="1.5"/>
+								</svg>							
+							</div>
+						</div>
+					</div>
+					<div style="--gap:30px;" class="product-block__list">
+						<div class="product">
+							<img class="product__image" src="/assets/img/furniture-1.svg" alt="">
+							<div class="product__description">
+								<div>
+									<div class="product__price"><span class="product__currency">$</span> 49,143</div>
+									<div class="product__name">Gulshan duplex house</div>
+								</div>
+								<a class="product-block__circle product-block__circle_purple" href="#">
+									<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1 1H13M13 1V13M13 1L1 13" stroke="#FFFFFF" stroke-width="1.5"/>
+									</svg>	
+								</a>
+							</div>
+						</div>
+						<div class="product">
+							<img class="product__image" src="/assets/img/furniture-2.svg" alt="">
+							<div class="product__description">
+								<div>
+									<div class="product__price"><span class="product__currency">$</span> 23,453</div>
+									<div class="product__name">Soft apatrments</div>
+								</div>
+								<a class="product-block__circle product-block__circle_purple" href="#">
+									<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1 1H13M13 1V13M13 1L1 13" stroke="#FFFFFF" stroke-width="1.5"/>
+									</svg>	
+								</a>
+							</div>
+						</div>
+						<div class="product">
+							<img class="product__image" src="/assets/img/furniture-3.svg" alt="">
+							<div class="product__description">
+								<div>
+									<div class="product__price"><span class="product__currency">$</span> 110,21</div>
+									<div class="product__name">Luxury villa</div>
+								</div>
+								<a class="product-block__circle product-block__circle_purple" href="#">
+									<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1 1H13M13 1V13M13 1L1 13" stroke="#FFFFFF" stroke-width="1.5"/>
+									</svg>	
+								</a>
+							</div>
+						</div>
+						<div class="product">
+							<img class="product__image" src="/assets/img/furniture-3.svg" alt="">
+							<div class="product__description">
+								<div>
+									<div class="product__price"><span class="product__currency">$</span> 110,21</div>
+									<div class="product__name">Luxury villa</div>
+								</div>
+								<div class="product-block__circle product-block__circle_purple">
+									<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1 1H13M13 1V13M13 1L1 13" stroke="#FFFFFF" stroke-width="1.5"/>
+									</svg>	
+								</div>
+							</div>
+						</div>
+						<div class="product">
+							<img class="product__image" src="/assets/img/furniture-3.svg" alt="">
+							<div class="product__description">
+								<div>
+									<div class="product__price"><span class="product__currency">$</span> 110,21</div>
+									<div class="product__name">Luxury villa</div>
+								</div>
+								<div class="product-block__circle product-block__circle_purple">
+									<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1 1H13M13 1V13M13 1L1 13" stroke="#FFFFFF" stroke-width="1.5"/>
+									</svg>	
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="product-block__description">
-					<div class="feature">
-						<h2 class="title title_white feature__text-content feature__text-content_width-470">Popular property</h2>
-						<p class="text text_light-purple feature__text-content feature__text-content_width-470">Building a next-generation collaborative platform to connect renters, homeowners, and agents.</p>
-					</div>
-					<div class="product-block__arrows">
-						<div class="product-block__circle product-block__circle_white">
-							<svg style="transform: scaleX(-1);" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M1 1H13M13 1V13M13 1L1 13" stroke="#6637EE" stroke-width="1.5"/>
-							</svg>
-						</div><div class="product-block__circle product-block__circle_orange">
-							<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M1 1H13M13 1V13M13 1L1 13" stroke="#FFFFFF" stroke-width="1.5"/>
-							</svg>							
-						</div>
-					</div>
-				</div>
-				<img class="product-block__another" style="grid-area: image1;width: 100%;height: auto;" src="/assets/img/furniture-2.svg" alt="">
-				<img class="product-block__another" style="grid-area: image2;width: 100%;height: auto;" src="/assets/img/furniture-3.svg" alt="">
-			</div>
 			<div class="text-align-center">
 				<a class="button product-block__button" href="#">All Property</a>
 			</div>
-		</div>
 	</section>
 	<section class="theme theme_yellow container feature feature_pt-medium feature_pb-medium video-block">
 		<div class="video-block__description text-align-center">
@@ -188,12 +242,12 @@
 			<div>
 				<h2 class="title title_white feature__text-content feature__text-content_width-470">What client say</h2>
 				<div class="reviews-block__navigation-dots">
-					<div class="reviews-block__dot"></div>
 					<div class="reviews-block__dot reviews-block__dot_active"></div>
+					<div class="reviews-block__dot"></div>
 					<div class="reviews-block__dot"></div>
 				</div>
 			</div>
-			<div class="reviews-block__review review">
+			<div class="reviews-block__review review review_visible">
 				<p class="text text_purple-grey">I love Dwelling! They make it super easy and safe to find a room for rent. Customer service is very quick and helpful. Highly recommend this platform. Really a great and wonderful platform to find rooms and houses in quick time.</p>
 				<div>
 					<div class="reviews-block__author">
@@ -201,6 +255,30 @@
 						<div>
 							<p class="text text_white">Joe Root</p>
 							<p class="text text_purple-grey review__occupation">UI/UX designer</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="reviews-block__review review">
+				<p class="text text_purple-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id felis quis eros faucibus mollis. Cras ut ipsum tincidunt orci iaculis imperdiet at eget dui. Curabitur rhoncus dolor nisl, sed mollis libero varius mollis. Suspendisse dictum vitae elit sit amet pretium.</p>
+				<div>
+					<div class="reviews-block__author">
+						<img src="/assets/img/ellipse-designer.svg" alt="">
+						<div>
+							<p class="text text_white">Hank Tomford</p>
+							<p class="text text_purple-grey review__occupation">Programmer</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="reviews-block__review review">
+				<p class="text text_purple-grey">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent non semper velit.</p>
+				<div>
+					<div class="reviews-block__author">
+						<img src="/assets/img/ellipse-designer.svg" alt="">
+						<div>
+							<p class="text text_white">Kate Parker</p>
+							<p class="text text_purple-grey review__occupation">Artist</p>
 						</div>
 					</div>
 				</div>
@@ -270,13 +348,13 @@
 		</div>
 		<div class="footer footer_bottom row">
 			<div class="social-media footer__social-media">
-				<div class="social-media__circle social-media__circle_orange">
+				<a class="social-media__circle social-media__circle_orange" href="https://www.facebook.com/" target="_blank">
 					<img src="/assets/img/facebook.svg" alt="">
-				</div><div class="social-media__circle">
+				</a><a class="social-media__circle" href="https://www.linkedin.com/" target="_blank">
 					<img src="/assets/img/linkedin.svg" alt="">
-				</div><div class="social-media__circle">
+				</a><a class="social-media__circle" href="https://twitter.com/" target="_blank">
 					<img src="/assets/img/twitter.svg" alt="">
-				</div>
+				</a>
 			</div>
 			<p style="font-size: 16px;line-height: 26px;" class="text text_grey">Copyright @UIHUT 2022</p>
 		</div>
@@ -328,6 +406,9 @@
                 }
             })
 	</script>
+
+	<script src="reviews-carousel.js"></script>
+	<script src="products-carousel.js"></script>
 
 </body>
 
