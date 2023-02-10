@@ -2,5 +2,9 @@
   "devDependencies": {
     "@parcel/transformer-sass": "2.8.0",
     "parcel": "^2.8.0"
+  },
+  "scripts": {
+    "build": "parcel build ./src/* --public-url ./",
+    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   }
 }
