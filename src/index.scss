@@ -395,15 +395,11 @@ a {
         width: 26.6%;
         height: 26.6%;
         background: #00CE7C;
-        outline: 1px solid $first-white-color;
+        border: 1px solid $first-white-color;
         border-radius: 50%;
         position: absolute;
         bottom: 0;
         right: 0;
-        @media screen and (max-width: 767px) {
-          bottom: -30%;
-          right: -20%;
-        }
       }
     }
   }
@@ -414,9 +410,9 @@ a {
     }
     & > img {
       object-fit: cover;
-      width: 100%;
-      @media screen and (min-width: 768px) and (max-width: 1279px) {
-        width: 80%;
+      width: 470px;
+      @media screen and (max-width: 767px) {
+        width: 280px;
       }
     }
   }
@@ -451,16 +447,19 @@ a {
   }
   &__two-images {
     display: flex;
-    column-gap: 5.26%;
+    column-gap: 30px;
     @media screen and (min-width: 768px) and (max-width: 1279px) {
       margin-bottom: 50px;
     }
     @media screen and (max-width: 767px) {
       margin-bottom: 43.6px;
+      column-gap: 17px;
     }
     & img {
-      width: 100%;
-      min-width: 0;
+      width: 270px;
+      @media screen and (max-width: 767px) {
+        width: 160px;
+      }
     }
   }
   &_pt-big {
@@ -512,6 +511,12 @@ a {
     background-color: $purple-color;
     padding: 0.44em 1.33em;
     margin-top: 0.88em;
+  }
+  &__image {
+    width: 60px;
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
   }
 }
 
@@ -670,6 +675,9 @@ a {
     margin-top: 22px;
     @media screen and (max-width: 767px) {
       margin-top: 16px;
+    }
+    & > img {
+      width: 64px;
     }
   }
   &__navigation-dots {
