@@ -18,15 +18,20 @@ function updateReview(review_id) {
     dots[slidePosition].classList.add("reviews-block__dot_active");
 }
 
+function setupSlideChangeInterval() {
+    return setInterval(() => {
+        updateReview((slidePosition + 1) % dots.length);
+    }, 5000);
+}
+
+let slideChangeInterval = setupSlideChangeInterval();
+
 function onButtonClick(event) {
+    clearInterval(slideChangeInterval)
     updateReview(Array.prototype.indexOf.call(dots, event.currentTarget));
+    slideChangeInterval = setupSlideChangeInterval();
 }
 
 for (let dot of dots) {
     dot.addEventListener("click", onButtonClick);
 }
-
-setInterval(() => {
-    updateReview((slidePosition + 1) % dots.length);
-}, 5000)
-
