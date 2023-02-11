@@ -625,6 +625,10 @@ a {
     font-size: 22px;
     line-height: 32px;
     color: $first-black-color;
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+      line-height: 24px;
+    }
   }
   &__currency {
     color: $orange-color;
@@ -634,6 +638,10 @@ a {
     font-size: 26px;
     line-height: 36px;
     color: $first-black-color;
+    @media screen and (max-width: 767px) {
+      font-size: 18px;
+      line-height: 28px;
+    }
   }
   &__image {
     width: 100%;
